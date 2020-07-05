@@ -1,4 +1,3 @@
-
 var toDo = ["", "", "", "", "", "", "", "", "", ""]
 
 $("#currentDay").text(moment().format("MM DD YYYY hh:mm"));
@@ -23,24 +22,18 @@ function loadTasks() {
     if (!savedTasks) {
         return false;
     };
-    let x = "";
+    let times = ["9", "10", "11", "12", "13", "14", "15", "16", "17"];
     savedTasks = JSON.parse(savedTasks);
     console.log(savedTasks);
         var currentHour = moment().format("H");
         var timeblock ="#toDo-";
         for (var i = 0; i < savedTasks.length; i++){
-            //debugger;
             $(timeblock + (i + 9)).val(savedTasks[i]);
-
-          
-
-                        
-
-
-                 if ((i + 9) < $(this).attr("data-time")) { 
-                     $(timeblock + (i + 9)).addClass("future");
+                 if (parseInt(currentHour) < parseInt(times[i]) ) { 
+                    console.log(currentHour) 
+                    $(timeblock + (i + 9)).addClass("future");
                  }
-                 else if ((i + 9) == $(this).attr("data-time")) {
+                 else if (currentHour == times[i]) {
                      $(timeblock + (i + 9)).addClass("present");
                  }
                  else {
