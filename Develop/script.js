@@ -10,6 +10,7 @@ loadTasks();
 $(".saveBtn").on("click", function() {
     var time = $(this).attr("data-time");
     var text =$("#toDo-" + time).val();
+    console.log(time, text);
     toDo[parseInt(time)-9] = text;
     console.log(toDo);
     localStorage.setItem("todos", JSON.stringify(toDo));
@@ -22,20 +23,28 @@ function loadTasks() {
     if (!savedTasks) {
         return false;
     };
+    let x = "";
     savedTasks = JSON.parse(savedTasks);
+    console.log(savedTasks);
         var currentHour = moment().format("H");
-        var timeblock ="#toDo-" + (i+9);
+        var timeblock ="#toDo-";
         for (var i = 0; i < savedTasks.length; i++){
-            console.log(savedTasks[i]);
-            $(timeblock).val(savedTasks[i]);
-                 if ((i + 9) < currentHour) {
-                     $(timeblock).addClass("past");
+            //debugger;
+            $(timeblock + (i + 9)).val(savedTasks[i]);
+
+          
+
+                        
+
+
+                 if ((i + 9) < $(this).attr("data-time")) { 
+                     $(timeblock + (i + 9)).addClass("future");
                  }
-                 else if ((i + 9) == currentHour) {
-                     $(timeblock).addClass("present");
+                 else if ((i + 9) == $(this).attr("data-time")) {
+                     $(timeblock + (i + 9)).addClass("present");
                  }
                  else {
-                     $(timeblock).addClass("future");
+                     $(timeblock + (i + 9)).addClass("past");
                  }
         }
 
