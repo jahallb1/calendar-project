@@ -18,6 +18,10 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -30,9 +34,110 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
+      <div class="row">
+        <div class="col-1 hour">
+        9AM
+        </div>
+        <div class="col-10">
+          <textarea id="toDo-9"></textarea>
+        </div>
+        <div class="col-1 saveBtn" id=""  data-time="9">
+          <span class="oi oi-box"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1 hour">
+        10AM
+        </div>
+        <div class="col-10">
+          <textarea id="toDo-10"></textarea>
+        </div>
+        <div class="col-1 saveBtn" id="hover"  data-time="10">
+          <span class="oi oi-box"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1 hour" data-time="11">
+        11AM
+        </div>
+        <div class="col-10">
+          <textarea id="toDo-11"></textarea>
+        </div>
+        <div class="col-1 saveBtn">
+          <span class="oi oi-box"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1 hour" data-time="12">
+        12PM
+        </div>
+        <div class="col-10">
+          <textarea id="toDo-12"></textarea>
+        </div>
+        <div class="col-1 saveBtn">
+          <span class="oi oi-box"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1 hour">
+        1PM
+        </div>
+        <div class="col-10">
+          <textarea id="toDo-13"></textarea>
+        </div>
+        <div class="col-1 saveBtn">
+          <span class="oi oi-box"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1 hour">
+        2PM
+        </div>
+        <div class="col-10 textarea">
+          <textarea id="toDo-14"></textarea>
+        </div>
+        <div class="col-1 saveBtn">
+          <span class="oi oi-box"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1 hour">
+        3PM
+        </div>
+        <div class="col-10 textarea">
+          <textarea id="toDo-15"></textarea>
+        </div>
+        <div class="col-1 saveBtn">
+          <span class="oi oi-box"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1 hour">
+        4PM
+        </div>
+        <div class="col-10 textarea">
+          <textarea id="toDo-16"></textarea>
+        </div>
+        <div class="col-1 saveBtn">
+          <span class="oi oi-box"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1 hour">
+        5PM
+        </div>
+        <div class="col-10 textarea">
+          <textarea id="toDo-17"></textarea>
+        </div>
+        <div class="col-1 saveBtn">
+          <span class="oi oi-box"></span>
+        </div>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
