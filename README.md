@@ -27,5 +27,6 @@ HTML, CSS, jQuery, Moment.js, Bootstrap
 ## Screenshot
 ![alt text](https://github.com/jahallb1/calendar-project/blob/master/Develop/assets/Screen%20Shot%202020-07-05%20at%207.00.59%20PM.png)
 
+
 ## Author
 Josh Hall
